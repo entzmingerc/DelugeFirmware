@@ -102,7 +102,7 @@ void MelodicInstrument::receivedNote(ModelStackWithTimelineCounter* modelStack, 
 	int32_t highlightNoteValue = -1;
 	switch (match) {
 	case MIDIMatchType::NO_MATCH:
-		break;
+		return;
 	case MIDIMatchType::MPE_MASTER:
 	case MIDIMatchType::MPE_MEMBER:
 		mpeValues = mpeValuesOrNull = fromDevice->defaultInputMPEValuesPerMIDIChannel[midiChannel];
